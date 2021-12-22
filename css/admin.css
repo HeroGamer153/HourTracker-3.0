@@ -1,0 +1,35 @@
+/* our colors
+    grey = #BABFB7
+    blue = #02243E
+    orange = #FE5000
+*/
+/*
+#peopleData{
+	border: 5px;
+	border-color: #BABFB7;
+}
+#peopleData th{
+	border: 2px;
+	border-color: #BABFB7;
+}
+*/
+h2{
+	font-size: 20px;
+}
+
+.hourTable {
+	position:absolute;
+	float: down;
+}
+
+#personData{
+	float: right;
+}
+
+#tableBody {
+
+}
+
+#hereTable, #noOneHereBox{
+	display: none;
+}

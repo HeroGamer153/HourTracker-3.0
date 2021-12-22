@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<title>HourLogger | Scan In</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<base href = "../">
+
+		<link rel = "stylesheet" type = "text/css" href = "css/styles.css">
+		<link rel = "stylesheet" type = "text/css" href = "css/scan.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--	
+		this library is for finding barcodes from a camera, 
+		very reliable only on smartphones
+		but also works with other devices in decent lighting
+		<script type="text/javascript" src="https://unpkg.com/@zxing/library@0.18.4/umd/index.js"></script>
+-->
+		<script src = "https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+		<script src = "https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+		<script src = "https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+		<script src = "https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+		<script type = "module" src="js/scan.js"></script>
+		
+	</head>
+
+	<body id = "background">
+		
+		<div data-includeHTML = "html/HTMLImports/header.html"></div>
+		
+		<div id ="top">
+ 			<h1>Scan</h1>
+ 			<body id = "topBody" style="font-size:30px;">
+				Place your Student ID in the scanner slot
+ 			</body>
+		</div>
+		
+		<div id = middle>
+			<input type="text" id="IDselect">
+			<label id = "result">
+				<em>Scanning ...</em>
+			</label>
+			<img id = "greenBox" height = "200" width = "200" src = "Pictures/greenBox.jpg">
+
+		</div>
+
+		<span class = "switchBox">
+			
+			Check In
+			<label class="switch">
+
+				<input id = "checkInSwitchToggle" type="checkbox" value="true">
+				<span class="slider round"></span>
+			</label>
+			Check Out
+		</span>
+
+		<span class = "switchBox">
+	
+			Shop
+			<label class="switch">
+				<input id = "typeSwitchToggle" type = "checkbox" value = "service">
+				<span class = "slider round"></span>
+			</label>
+			Service
+		</span>
+
+		<div id = "footer" data-includeHTML = "html/HTMLImports/footer.html"></div>
+	
+	</body>
+
+</html>
